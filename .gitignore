@@ -1,5 +1,32 @@
-venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Environment variables (IMPORTANT)
+.env
+*.env
+
+# MLflow
 mlruns/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+.virtual_documents/
+anaconda_projects/
