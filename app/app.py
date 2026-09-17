@@ -1,11 +1,14 @@
 import streamlit as st
 import pickle
 import pandas as pd
+from pathlib import Path
 
 # Load the saved recommender artifacts
-with open('../models/hotel_recommender.pkl', 'rb') as f:
-    artifacts = pickle.load(f)
+MODEL_PATH = Path(__file__).resolve().parent.parent / "models" / "hotel_recommender.pkl"
 
+
+with open(MODEL_PATH, 'rb') as f:
+    artifacts = pickle.load(f)
 user_place_matrix = artifacts['user_place_matrix']
 user_similarity_df = artifacts['user_similarity_df']
 place_profile = artifacts['place_profile']
